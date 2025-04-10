@@ -1,0 +1,47 @@
+.header {
+    margin-top: 10px;
+}
+
+.header .container {
+    background-image: url(../../assets/frontend_assets/header_img.png);
+    height: 34vw;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.header .container .text {
+    padding-top: 50px;
+    padding-left: 35px;
+    color: var(--white-color);
+}
+
+.header .container .text h1 {
+    font-size: max(4.5vw);
+    margin-bottom: 30px;
+}
+
+.header .container .text p {
+    width: 60%;
+    line-height: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.header .container .text button {
+    padding: 10px 25px;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #eee;
+    color: var(--white-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header .container .text button:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}

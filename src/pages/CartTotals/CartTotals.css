@@ -1,0 +1,91 @@
+.cartTotals {
+    margin-top: 15px;
+}
+
+.cartTotals .contianer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartTotals .contianer .premo_code,
+.cartTotals .contianer .cart_Total {
+    width: 45%;
+}
+
+.cartTotals .contianer .cart_Total h2 {
+    font-size: 20px;
+}
+
+.cartTotals .contianer .cart_Total ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.cartTotals .contianer .cart_Total ul li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.cartTotals .contianer .cart_Total button {
+    padding: 10px 18px;
+    color: #fff;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* premo */
+
+.cartTotals .contianer .premo_code h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00000098;
+}
+
+.cartTotals .contianer .premo_code div {
+    margin-top: 25px;
+    display: flex;
+}
+
+.cartTotals .contianer .premo_code div input {
+    border: none;
+    outline: none;
+    padding: 15px 15px;
+    background-color: #eee;
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+
+.cartTotals .contianer .premo_code div button {
+    outline: none;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    width: 30%;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+
+@media (max-width:750px) {
+    .cartTotals .contianer {
+        flex-direction: column;
+    }
+
+    .cartTotals .contianer .premo_code,
+    .cartTotals .contianer .cart_Total {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+}

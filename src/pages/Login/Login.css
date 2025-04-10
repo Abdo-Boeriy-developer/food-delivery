@@ -1,0 +1,91 @@
+.login {
+    margin-top: 40px;
+}
+
+.login form {
+    position: relative;
+}
+
+.login .div {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login h2 {
+    margin-bottom: 10px;
+    color: #000;
+    position: relative;
+}
+
+.login h2::after {
+    position: absolute;
+    top: 15px;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #00000081;
+    border-radius: 5px;
+}
+
+.login form .name {
+    margin-bottom: 20px;
+    padding: 10px 10px;
+}
+
+.login form .error {
+    color: red;
+    font-size: 12px;
+    top: 35px;
+    margin-top: -19px;
+    margin-bottom: 12px;
+}
+
+.login form .errors {
+    color: red;
+    font-size: 12px;
+    top: 35px;
+    margin-top: -14px;
+}
+
+.login form input {
+    width: 100%;
+    padding: 9px 10px;
+    outline: none;
+    border: 1px solid #a39c9c;
+    border-radius: 5px;
+}
+
+.login form .inpusts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login form .Login_sing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #010101a5;
+    cursor: pointer;
+}
+
+.login form .Login_sing p {
+    color: tomato;
+}
+
+.login form button {
+    margin-top: 15px;
+    padding: 8px 35px;
+    border: none;
+    outline: none;
+    border-radius: 8px 0 8px 0;
+    background-color: tomato;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/*  */

@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+:root {
+  --tomoto-color: tomato;
+  --white-color: white;
+  --black-color: #000;
+  --eee-color: #9d9595;
+}
+
+
+.container {
+  width: 90%;
+  margin: auto;
+}

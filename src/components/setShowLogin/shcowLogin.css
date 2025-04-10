@@ -1,0 +1,59 @@
+.showLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.showLogin .show_log {
+    width: 50%;
+    margin: auto;
+}
+
+.showLogin .show_log p {
+    margin: auto;
+    width: 90%;
+    padding-top: 5px;
+}
+
+.showLogin .show_log {
+    height: 130px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px #a39595;
+}
+
+.showLogin .show_log div {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.showLogin .show_log .cancel {
+    background-color: red;
+}
+
+.showLogin .show_log button {
+    padding: 10px 30px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: tomato;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media(max-width:750px) {
+    .showLogin .show_log {
+        width: 100%;
+    }
+}
