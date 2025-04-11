@@ -6,22 +6,23 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
 import { StoreContext } from "../../components/Context/ShopContext";
+import { schema } from "../../lib/Schema";
 
-const schema = z
-  .object({
-    name: z.string().min(1, { message: "Name is required" }),
-    email: z.string().email({ message: "Invalid email address" }),
-    password: z
-      .string()
-      .min(6, { message: "Password must be at least 6 charaters" }),
-    confirm: z
-      .string()
-      .min(6, { message: "Password must be at least 6 charaters" }),
-  })
-  .refine((value) => value.password === value.confirm, {
-    message: "Password don match",
-    path: ["confirm"],
-  });
+// const schema = z
+//   .object({
+//     name: z.string().min(1, { message: "Name is required" }),
+//     email: z.string().email({ message: "Invalid email address" }),
+//     password: z
+//       .string()
+//       .min(6, { message: "Password must be at least 6 charaters" }),
+//     confirm: z
+//       .string()
+//       .min(6, { message: "Password must be at least 6 charaters" }),
+//   })
+//   .refine((value) => value.password === value.confirm, {
+//     message: "Password don match",
+//     path: ["confirm"],
+//   });
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -72,6 +73,7 @@ const Login = () => {
                 type="text"
                 placeholder="Enter Your Name"
                 className="name"
+                style={{ borderColor: errors?.password?.message && "red" }}
               />
               {errors?.name?.message && (
                 <p className="error">{errors?.name?.message}</p>
@@ -83,6 +85,7 @@ const Login = () => {
               {...register("email")}
               type="email"
               placeholder="Enter Your Email"
+              style={{ borderColor: errors?.password?.message && "red" }}
             />
             {errors?.email?.message && (
               <p className="errors">{errors?.email?.message} </p>
@@ -92,6 +95,7 @@ const Login = () => {
               {...register("password")}
               type="password"
               placeholder="Password"
+              style={{ borderColor: errors?.password?.message && "red" }}
             />
             {errors?.password?.message && (
               <p className="errors">{errors?.password?.message}</p>
@@ -100,6 +104,7 @@ const Login = () => {
               {...register("confirm")}
               type="password"
               placeholder="confirm Password"
+              style={{ borderColor: errors?.password?.message && "red" }}
             />
             {errors?.confirm?.message && (
               <p className="errors">{errors?.confirm?.message}</p>
