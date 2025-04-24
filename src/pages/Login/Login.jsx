@@ -53,10 +53,10 @@ const Login = () => {
     console.log(event);
   };
 
-  useEffect(() => {
-    const savedUser = JSON.parse(localStorage.getItem("user"));
-    console.log(savedUser);
-  }, []);
+  // useEffect(() => {
+  //   const savedUser = JSON.parse(localStorage.getItem("user"));
+  //   console.log(savedUser);
+  // }, []);
   useEffect(() => {
     reset();
   }, [formLogin]);
@@ -118,15 +118,7 @@ const Login = () => {
               <p onClick={() => setFormLogin("Login")}>Login Here</p>
             )}
           </div>
-          <button
-            onClick={() => {
-              if (handleSubmit === true) {
-                setIsLogin(true);
-                localStorage.setItem("user", JSON.stringify(setIsLogin));
-                console.log(setIsLogin);
-              }
-            }}
-          >
+          <button onClick={() => setIsLogin(true)}>
             {formLogin === "Sign Up" ? "Login" : "Sign Up"}
           </button>
         </form>

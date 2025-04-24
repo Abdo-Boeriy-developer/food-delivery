@@ -13,6 +13,7 @@ const ProductItem = ({ id, name, img, price, description }) => {
     setShowLogin,
   } = useContext(StoreContext);
   // console.log(cartItems);
+
   return (
     <div className="items_box">
       <div className="item_box">
@@ -23,13 +24,23 @@ const ProductItem = ({ id, name, img, price, description }) => {
           {!cartItems[id] ? (
             <img
               src={assets.add_icon_white}
+              // onClick={() => {
+              //   if (isLogin === false) {
+              //     setShowLogin(true);
+              //   } else {
+              //     addToCart(id);
+              //   }
+              // }}
+
               onClick={() => {
-                if (isLogin === false) {
-                  setShowLogin(true);
-                } else {
+                if (isLogin) {
                   addToCart(id);
+                } else {
+                  setShowLogin(true);
                 }
               }}
+
+              // onClick={() => addToCart(id)}
             />
           ) : (
             <div className="add_remove">

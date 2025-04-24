@@ -7,13 +7,28 @@ export const StoreContext = createContext(null);
 
 const ShopContext = ({ children }) => {
   const currenscy = "$";
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState(() => {
+    const saved = localStorage.getItem("cartItems");
+    return saved ? JSON.parse(saved) : {};
+  });
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [productData, setProductData] = useState([]);
   const location = useLocation();
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(() => {
+    const login = localStorage.getItem("login");
+    return login ? JSON.parse(login) : false;
+  });
   const [shcowLogin, setShowLogin] = useState(false);
+
+  // cart items
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+  // login
+  useEffect(() => {
+    localStorage.setItem("login", JSON.stringify(isLogin));
+  }, [isLogin]);
 
   useEffect(() => {
     setProductData(food_list);
