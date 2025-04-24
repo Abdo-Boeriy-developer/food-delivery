@@ -8,7 +8,7 @@ export const StoreContext = createContext(null);
 const ShopContext = ({ children }) => {
   const currenscy = "$";
   const [cartItems, setCartItems] = useState(() => {
-    const saved = localStorage.getItem("cartItems");
+    const saved = sessionStorage.getItem("cartItems");
     return saved ? JSON.parse(saved) : {};
   });
   const [search, setSearch] = useState("");
@@ -16,18 +16,18 @@ const ShopContext = ({ children }) => {
   const [productData, setProductData] = useState([]);
   const location = useLocation();
   const [isLogin, setIsLogin] = useState(() => {
-    const login = localStorage.getItem("login");
+    const login = sessionStorage.getItem("login");
     return login ? JSON.parse(login) : false;
   });
   const [shcowLogin, setShowLogin] = useState(false);
 
   // cart items
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
   // login
   useEffect(() => {
-    localStorage.setItem("login", JSON.stringify(isLogin));
+    sessionStorage.setItem("login", JSON.stringify(isLogin));
   }, [isLogin]);
 
   useEffect(() => {
